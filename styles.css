@@ -1,0 +1,340 @@
+/*Estilos generales*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+body {
+    background-image: url(img/paven.png);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #529125;
+}
+
+a:hover {
+    color: #285616;
+}
+
+/*Cabecera*/
+header {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#logotipo {
+    margin: auto;
+}
+
+#logotipo img {
+    width: 140px;
+}
+
+header h1 {
+    font-size: 40px;
+    color: #70b231;
+    text-shadow: 0px 2px 4px #333333;
+}
+
+/*Menú*/
+nav {
+    width: 100%;
+    background-color: #333333;
+    height: 40px;
+    box-shadow: 0px 0px 2px grey;
+    margin: 10px auto;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    width: 1130px;
+    margin: auto;
+    list-style: none;
+    gap: 15px;
+}
+
+nav ul li {
+    line-height: 40px;
+}
+
+nav ul li:hover {
+    background-color: #70b231;
+    box-shadow: 0px 0px 4px grey inset;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+}
+
+/*Contenido principal*/
+#content {
+    width: 1250px;
+    height: auto;
+    margin: auto;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+}
+
+#aside {
+    background-color: white;
+    box-shadow: 0px 2px 2px #ccc;
+    margin-bottom: auto;
+}
+
+#aside h3 {
+    text-align: center;
+    background-color: #ccc;
+}
+
+.widget {
+    width: 180px;
+    margin: 5px auto;
+}
+
+.widget form {
+    margin: 5px;
+    text-align: center;
+}
+
+.widget a {
+    display: block;
+}
+
+.widget ul {
+    margin-top: 5px;
+}
+
+.separador {
+    border-top: 1px dashed #333;
+}
+
+input[type="submit"] {
+    background-color: #70b231;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0px 0px 2px gray;
+}
+
+/*Secciones*/
+#sections {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    min-height: 1100px;
+    margin-bottom: 2vw;
+}
+
+#sections section {
+    background-color: white;
+    box-shadow: 0px 0px 4px #c9c9c9;
+    text-align: justify;
+    padding: 20px;
+    position: relative;
+}
+
+#sections h2 {
+    text-align: center;
+    padding: 5px;
+}
+
+.articulo {
+    padding: 5px;
+}
+
+.stickers {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+}
+
+.stickerOne {
+    position: absolute;
+    top: -20px;
+}
+
+.stickerTwo {
+    position: absolute;
+    right: 40px;
+    top: -20px;
+}
+
+/*Pie de página*/
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: auto;
+    background-color: #333333;
+    color: white;
+    box-shadow: 0px 0px 2px gray;
+    text-align: center;
+}
+
+/*Diseño responsivo*/
+@media (max-width: 768px) {
+    nav {
+        display: grid;
+        height: auto;
+        width: 100%;
+    }
+
+    nav ul {
+        grid-template-columns: repeat(5, 1fr);
+        width: 100%;
+    }
+
+    #content {
+        width: 95%;
+        margin: 20px auto;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #sections {
+        width: 100%;
+        gap: 20px;
+    }
+
+    #aside {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        gap: 10px; /* Espacio entre filas y columnas */
+        padding: 10px; /* Espacio alrededor del grid */
+    }
+
+    .widget{
+        border: 1px dashed gray;
+        padding: 10px;
+    }
+
+    #aula1{
+        grid-row-start: 1;
+        grid-column-start: 2;
+    }
+
+    #aula2{
+        grid-row-start: 2;
+        grid-column-start: 1;
+    }
+
+    #enlaces{
+        grid-row-start: 2;
+        grid-column-start: 2;
+    }
+
+    .separador {
+        border: none;
+    }
+
+    #logotipo img {
+        width: 100px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav ul {
+        width: 100%;
+    }
+
+    .clearfix {
+        float: none;
+        clear: both;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        display: grid;
+        height: auto;
+        width: 100%;
+    }
+
+    nav ul {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    #content {
+        width: 100%;
+        margin: 5px auto;
+        font-size: 14px;
+        display: grid;
+        place-items: center;
+    }
+
+    #sections {
+        width: 95%;
+    }
+
+    #aside {
+        width: 50%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 4fr;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    #aula1{
+        grid-row-start: 2;
+        grid-column-start: 1;
+    }
+
+    #aula2{
+        grid-row-start: 3;
+        grid-column-start: 1;
+    }
+    
+    #enlaces{
+        grid-row-start: 4;
+        grid-column-start: 1;
+    }
+
+    .widget {
+        border: none;
+        border-bottom: 1px dashed gray;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-top: 0;
+    }
+
+    .widget:last-child {
+        border-bottom: none;
+    }
+
+    #logotipo img {
+        width: 60px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    input[type="submit"] {
+        margin-top: 5px;
+    }
+}
